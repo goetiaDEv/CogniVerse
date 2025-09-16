@@ -30,7 +30,7 @@ const NeuralNetworkBackground: React.FC = () => {
 
     const resizeCanvas = () => {
       const headerElement = document.querySelector('.header');
-      if (headerElement) {
+      if (headerElement instanceof HTMLElement) {
         canvas.width = headerElement.offsetWidth;
         canvas.height = headerElement.offsetHeight;
       } else {
