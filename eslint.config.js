@@ -4,7 +4,6 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
-import tailwindcss from 'eslint-plugin-tailwindcss'
 import { globalIgnores } from 'eslint/config'
 
 export default tseslint.config([
@@ -17,7 +16,6 @@ export default tseslint.config([
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
       jsxA11y.configs.recommended, // Adiciona regras de acessibilidade
-      tailwindcss.configs.recommended, // Adiciona regras do Tailwind CSS
     ],
     languageOptions: {
       ecmaVersion: 2020,
@@ -31,10 +29,6 @@ export default tseslint.config([
     settings: {
       react: {
         version: 'detect',
-      },
-      tailwindcss: {
-        callees: ['cn'],
-        config: './tailwind.config.js',
       },
     },
     rules: {
